@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .box {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .highlight {
+            font-weight: bold;
+            color: {{ highlight_color }};
+        }
+        .new-calc {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .new-calc a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .new-calc a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados</h1>
+    <div class="box">Preço de Venda (R$): {{ sale_price }}</div>
+    <div class="box">Tarifa Marketplace (R$): {{ results['marketplace_fee'] | round(2) }}</div>
+    <div class="box">Frete Utilizado (R$): {{ results['freight_used'] | round(2) }}</div>
+    <div class="box">Taxa Fixa (R$): {{ results['fixed_fee'] | round(2) }}</div>
+    <div class="box">Lucro Bruto Inicial (R$): {{ results['gross_profit_initial'] | round(2) }}</div>
+    <div class="box">Impostos (R$): {{ results['tax'] | round(2) }}</div>
+    <div class="box">Seguro de Devolução (R$): {{ results['return_insurance'] | round(2) }}</div>
+    <div class="box highlight">Lucro Líquido (R$): {{ results['net_profit'] | round(2) }}</div>
+    <div class="box">Margem de Contribuição (%): {{ results['contribution_margin_percentage'] | round(2) }}</div>
+    <div class="box">ROI: {{ results['roi'] | round(2) }}</div>
+    <h2>Distribuição de Custos</h2>
+    <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Distribuição de Custos">
+    <div class="new-calc">
+        <a href="/">Novo Cálculo</a>
+    </div>
+</body>
+</html>
