@@ -1,0 +1,142 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #EE4D2D;
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  color: #EE4D2D;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Rótulos e campos de entrada */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Botão de calcular */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #EE4D2D;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d64023;
+}
+
+/* Resultados */
+.results-table {
+  margin-top: 20px;
+  padding: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.result-row {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.result-row.even {
+  background-color: #f8f8f8;
+}
+
+.result-row.odd {
+  background-color: #ffffff;
+}
+
+.result-row p {
+  margin: 5px 0;
+}
+
+/* Cabeçalho dos resultados */
+#results h2 {
+  color: #EE4D2D;
+  margin-bottom: 10px;
+}
+
+/* Link para novo cálculo */
+.new-calc-button {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #EE4D2D;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 150px;
+  transition: background-color 0.3s ease;
+}
+
+.new-calc-button:hover {
+  background-color: #d64023;
+}
+
+/* Estilização de mensagens */
+#results p {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#results p.success {
+  background-color: #e6f9e6;
+  color: #2a7a2a;
+  border: 1px solid #c5e1c5;
+}
+
+#results p.error {
+  background-color: #f9e6e6;
+  color: #a72a2a;
+  border: 1px solid #e1c5c5;
+}
+.chart-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.chart-container img {
+  max-width: 100%;
+  height: auto;
+}

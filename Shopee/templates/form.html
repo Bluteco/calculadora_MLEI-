@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Precificação Shopee</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Precificação Shopee</h1>
+    <form action="/" method="post">
+      <label for="sale_price">Preço de Venda (R$):</label>
+      <input type="number" step="0.01" id="sale_price" name="sale_price" required>
+
+      <label for="product_cost">Custo do Produto (R$):</label>
+      <input type="number" step="0.01" id="product_cost" name="product_cost" required>
+
+      <label for="freight_cost">Custo do Frete (R$):</label>
+      <input type="number" step="0.01" id="freight_cost" name="freight_cost" required>
+
+      <label for="discount_rate">Desconto (%) (opcional):</label>
+      <input type="number" step="0.01" id="discount_rate" name="discount_rate">
+
+      <label for="return_insurance_rate">Seguro de Devolução (%):</label>
+      <input type="number" step="0.01" id="return_insurance_rate" name="return_insurance_rate">
+
+      <button type="submit">Calcular</button>
+    </form>
+  </div>
+</body>
+</html>

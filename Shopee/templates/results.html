@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados - Precificação Shopee</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resultados</h1>
+    <div id="results">
+      <p><strong>Preço de Venda (R$):</strong> {{ results['sale_price'] | round(2) }}</p>
+      <p><strong>Sugestão de Preço de Venda (R$):</strong> {{ results['suggested_sale_price'] | round(2) }}</p>
+      <p><strong>Tarifa Shopee (R$):</strong> {{ results['marketplace_fee'] | round(2) }}</p>
+      <p><strong>Frete Utilizado (R$):</strong> {{ results['transport_fee'] | round(2) }}</p>
+      <p><strong>Impostos (R$):</strong> {{ results['tax'] | round(2) }}</p>
+      <p><strong>Seguro Devolução (R$):</strong> {{ results['return_insurance'] | round(2) }}</p>
+      <p><strong>Desconto Aplicado (R$):</strong> {{ results['discount'] | round(2) }}</p>
+      <p><strong>Lucro Bruto (R$):</strong> {{ results['gross_profit'] | round(2) }}</p>
+      <p><strong>Lucro Líquido (R$):</strong> {{ results['net_profit'] | round(2) }}</p>
+      <p><strong>Margem de Contribuição (%):</strong> {{ results['contribution_margin_percentage'] | round(2) }}</p>
+      <p><strong>ROI:</strong> {{ results['roi'] | round(2) }}</p>
+    </div>
+
+    <div class="chart-container">
+      <h2>Distribuição de Custos</h2>
+      <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Distribuição de Custos">
+    </div>
+
+    <a href="/" class="button">Novo Cálculo</a>
+  </div>
+</body>
+</html>
