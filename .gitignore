@@ -1,4 +1,35 @@
+# Ignorar arquivos do sistema
+.DS_Store
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+
+# Ignorar pastas do Windows e do sistema
+AppData/
+Contacts/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+NTUSER.DAT*
+ntuser.dat.LOG*
+ntuser.ini
 .vscode/
-AppData/Local/AMD/
-__pycache__/
+
+# Ignorar arquivos do Python
 *.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.env
+.venv/
